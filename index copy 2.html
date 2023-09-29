@@ -1,0 +1,38 @@
+<!-- https://medium.com/swlh/ar-js-the-simplest-way-to-get-cross-browser-augmented-reality-on-the-web-10cbc721debc -->
+<!doctype HTML>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="./aframe-master.min.js"></script>
+    <script src="./aframe-ar.js"></script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+    <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
+    <a-scene embedded arjs>
+        <!-- <a-entity scale=".2 .2 .2"> -->
+            <!-- <a-entity gltf-model="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf" scale="-1 1 1"> -->
+                <!-- <a-entity gltf-model="./scene.gltf" scale="-1 1 1">
+        </a-entity> -->
+        <a-marker preset='hiro'>
+            <a-entity gltf-model="./scene.gltf" scale="1 1 1"></a-entity>
+        </a-marker>
+        <a-marker preset='custom' type='pattern' url="./pattern.patt">
+            <a-entity gltf-model="./scene.gltf" scale="1 1 1"></a-entity>
+        </a-marker>
+        <a-marker preset='custom' type='pattern' url="./pattern-1.patt">
+            <a-entity gltf-model="./scene.gltf" scale="1 1 1"></a-entity>
+        </a-marker>
+        <a-marker preset='custom' type='pattern' url="./pattern-inverted.patt">
+            <a-entity gltf-model="./scene.gltf" scale="1 1 1"></a-entity>
+        </a-marker>
+        
+    <a-entity camera></a-entity>
+        <!-- <a-marker-camera preset='custom' type='pattern' url='./pattern.patt'>
+
+        </a-marker-camera> -->
+    </a-scene>
+</body>
+
+</html>
