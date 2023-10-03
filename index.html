@@ -39,14 +39,14 @@
     </div>
     <a-scene renderer="logarithmicDepthBuffer:true;" embedded vr-mode-ui="enabled: false;" arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
         <a-assets>
-            <a-asset-items id="duck" src="./public/models/duck/scene.gltf"></a-asset-items>
-            <a-asset-items id="burger" src="/public/models/burger/scene.gltf"></a-asset-items>
-            <img class="image-sequence" id="cat" src="./public/image/cat/cat-0.png">
+            <a-asset-items id="duck" src="public/models/duck/scene.gltf"></a-asset-items>
+            <a-asset-items id="burger" src="public/models/burger/scene.gltf"></a-asset-items>
+            <img class="image-sequence" id="cat" src="public/image/cat/cat-0.png">
         </a-assets>
         <a-gltf-model position="0 0 0" scale="0.5 0.5 0.5" rotation="0 180 0" src="#duck" animation-mixer="clip: walkcycle_1;"></a-gltf-model>
         <a-image src="#cat" id="image-sequence" position="0.5 0.5 0" scale="0.75 0.5 0.5"></a-image>
         <a-nft type="nft" url="public/nft/trex" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
-            <a-entity gltf-model="/public/models/burger/scene.gltf" scale="150 150 150" position="50 0 0" rotation="-90 0 0">
+            <a-entity gltf-model="public/models/burger/scene.gltf" scale="150 150 150" position="50 0 0" rotation="-90 0 0">
             </a-entity>
         </a-nft>
         <a-entity camera="" position="0 0.4 2" wasd-controls="" rotation="-5.157 4.584 0" look-controls=""></a-entity>
@@ -57,7 +57,7 @@
 
     <script>
         var element = $('#image-sequence');
-        var imagePath = './public/image/cat/';
+        var imagePath = 'public/image/cat/';
         var totalFrames = 60;
         var animationDuration = 2000;
         var timePerFrame = animationDuration / totalFrames;
