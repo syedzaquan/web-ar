@@ -47,7 +47,7 @@
         <a-gltf-model position="0 0 0" scale="0.5 0.5 0.5" rotation="0 180 0" src="#duck" animation-mixer="clip: walkcycle_1;"></a-gltf-model>
         <a-image src="#cat" id="image-sequence" position="0.5 0.5 0" scale="0.75 0.5 0.5"></a-image>
         <a-nft type="nft" url="./web-ar/public/nft/kdtracker" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
-            <a-entity gltf-model="./public/models/burger/scene.gltf" scale="150 150 150" position="50 0 0" rotation="-90 0 0">
+            <a-entity gltf-model="./public/models/burger/scene.gltf" scale="300 300 300" position="0 0 0" rotation="-90 0 0" animation="property: rotation; easing: linear; to: 0 360 0; loop: true; dur: 5000">
             </a-entity>
         </a-nft>
         <a-entity camera="" position="0 0.4 2" wasd-controls="" rotation="-5.157 4.584 0" look-controls=""></a-entity>
